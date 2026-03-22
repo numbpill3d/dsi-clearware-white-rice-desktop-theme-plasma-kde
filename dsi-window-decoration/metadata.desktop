@@ -1,0 +1,16 @@
+[Desktop Entry]
+Comment=Nintendo DSi menu style window decoration
+Comment[en_US]=Nintendo DSi menu style window decoration
+Name=Dsi
+Name[en_US]=Dsi
+Type=Service
+X-KDE-ServiceTypes=KWin/Decoration
+X-KDE-PluginInfo-Author=deadgirl
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-Name=dsi
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=false

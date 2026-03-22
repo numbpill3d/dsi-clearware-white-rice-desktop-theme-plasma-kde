@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DSi tooltip — slightly blue-tinted white, rounded, blue border -->
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="gt" x1="0" y1="0" x2="0" y2="60" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#f2f6ff"/>
+   <stop offset="1" stop-color="#e8eef8"/>
+  </linearGradient>
+  <linearGradient id="gttop" x1="0" y1="0" x2="0" y2="6" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#9ec4f0"/>
+   <stop offset="0.4" stop-color="#c8daef"/>
+   <stop offset="1"   stop-color="#f2f6ff"/>
+  </linearGradient>
+  <linearGradient id="gtbot" x1="0" y1="54" x2="0" y2="60" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#e8eef8"/>
+   <stop offset="0.6" stop-color="#c8daef"/>
+   <stop offset="1"   stop-color="#9ec4f0"/>
+  </linearGradient>
+  <linearGradient id="gtl" x1="0" y1="0" x2="6" y2="0" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#9ec4f0"/>
+   <stop offset="0.4" stop-color="#c8daef"/>
+   <stop offset="1"   stop-color="#f2f6ff"/>
+  </linearGradient>
+  <linearGradient id="gtr" x1="54" y1="0" x2="60" y2="0" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#f2f6ff"/>
+   <stop offset="0.6" stop-color="#c8daef"/>
+   <stop offset="1"   stop-color="#9ec4f0"/>
+  </linearGradient>
+ </defs>
+
+ <rect id="hint-top-margin"    x="0" y="0" width="1" height="6" fill="none"/>
+ <rect id="hint-bottom-margin" x="0" y="0" width="1" height="6" fill="none"/>
+ <rect id="hint-left-margin"   x="0" y="0" width="6" height="1" fill="none"/>
+ <rect id="hint-right-margin"  x="0" y="0" width="6" height="1" fill="none"/>
+
+ <path id="topleft"     d="M 6,0 L 6,6 L 0,6 A 6,6 0 0 1 6,0 Z"           fill="#f2f6ff"/>
+ <path id="topright"    d="M 54,0 L 54,6 L 60,6 A 6,6 0 0 0 54,0 Z"       fill="#f2f6ff"/>
+ <path id="bottomleft"  d="M 0,54 L 6,54 L 6,60 A 6,6 0 0 1 0,54 Z"       fill="#e8eef8"/>
+ <path id="bottomright" d="M 60,54 L 54,54 L 54,60 A 6,6 0 0 0 60,54 Z"   fill="#e8eef8"/>
+
+ <rect id="top"    x="6"  y="0"  width="48" height="6"  fill="url(#gttop)"/>
+ <rect id="bottom" x="6"  y="54" width="48" height="6"  fill="url(#gtbot)"/>
+ <rect id="left"   x="0"  y="6"  width="6"  height="48" fill="url(#gtl)"/>
+ <rect id="right"  x="54" y="6"  width="6"  height="48" fill="url(#gtr)"/>
+ <rect id="center" x="6"  y="6"  width="48" height="48" fill="url(#gt)"/>
+</svg>

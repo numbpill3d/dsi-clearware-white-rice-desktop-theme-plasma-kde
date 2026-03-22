@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Authors": [{"Name": "deadgirl", "Email": ""}],
+        "Description": "Nintendo DSi menu style — white/grey plastic, rounded, glossy",
+        "Id": "dsi",
+        "License": "GPL-2.0-or-later",
+        "Name": "DSi",
+        "Version": "1.0"
+    }
+}

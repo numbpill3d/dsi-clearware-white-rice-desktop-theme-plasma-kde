@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  DSi-style close button — glossy plastic disc, × glyph
+  States: active=0  hover=22  pressed=44  inactive=66  deactivated=88
+-->
+<svg width="110" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <!-- default disc gradient -->
+  <linearGradient id="dsc" x1="0" x2="0" y1="3" y2="19" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#ededf2"/>
+   <stop offset="1"   stop-color="#d2d2db"/>
+  </linearGradient>
+  <!-- gloss overlay (shared across states) -->
+  <linearGradient id="gloss" x1="0" x2="0" y1="3" y2="13" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#ffffff" stop-opacity="0.72"/>
+   <stop offset="1"   stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <!-- hover: blue tint -->
+  <linearGradient id="hov" x1="0" x2="0" y1="3" y2="19" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#cce0fa"/>
+   <stop offset="1"   stop-color="#9ec6f2"/>
+  </linearGradient>
+  <!-- pressed: darker -->
+  <linearGradient id="prs" x1="0" x2="0" y1="3" y2="19" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#c4c4ce"/>
+   <stop offset="1"   stop-color="#ababb6"/>
+  </linearGradient>
+  <!-- inactive -->
+  <linearGradient id="ina" x1="0" x2="0" y1="3" y2="19" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#e2e2e4"/>
+   <stop offset="1"   stop-color="#ccccce"/>
+  </linearGradient>
+ </defs>
+
+ <!-- active -->
+ <g id="active-center">
+  <rect width="22" height="22" fill="none" opacity=".001"/>
+  <circle cx="11" cy="11" r="8" fill="url(#dsc)"/>
+  <circle cx="11" cy="11" r="8" fill="url(#gloss)"/>
+  <circle cx="11" cy="11" r="8" fill="none" stroke="#bebece" stroke-width="0.9"/>
+  <line x1="7.5" y1="7.5" x2="14.5" y2="14.5" stroke="#686878" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="14.5" y1="7.5" x2="7.5" y2="14.5" stroke="#686878" stroke-width="1.5" stroke-linecap="round"/>
+ </g>
+
+ <!-- hover -->
+ <g id="hover-center" transform="translate(22)">
+  <rect width="22" height="22" fill="none" opacity=".001"/>
+  <circle cx="11" cy="11" r="8" fill="url(#hov)"/>
+  <circle cx="11" cy="11" r="8" fill="url(#gloss)"/>
+  <circle cx="11" cy="11" r="8" fill="none" stroke="#7ab4f0" stroke-width="1.0"/>
+  <line x1="7.5" y1="7.5" x2="14.5" y2="14.5" stroke="#2858a0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="14.5" y1="7.5" x2="7.5" y2="14.5" stroke="#2858a0" stroke-width="1.6" stroke-linecap="round"/>
+ </g>
+
+ <!-- pressed -->
+ <g id="pressed-center" transform="translate(44)">
+  <rect width="22" height="22" fill="none" opacity=".001"/>
+  <circle cx="11" cy="11.5" r="8" fill="url(#prs)"/>
+  <circle cx="11" cy="11" r="8" fill="none" stroke="#9090a0" stroke-width="0.8"/>
+  <line x1="8" y1="8.5" x2="14" y2="14.5" stroke="#383850" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="14" y1="8.5" x2="8" y2="14.5" stroke="#383850" stroke-width="1.6" stroke-linecap="round"/>
+ </g>
+
+ <!-- inactive -->
+ <g id="inactive-center" transform="translate(66)">
+  <rect width="22" height="22" fill="none" opacity=".001"/>
+  <circle cx="11" cy="11" r="8" fill="url(#ina)"/>
+  <circle cx="11" cy="11" r="8" fill="none" stroke="#ccccce" stroke-width="0.7"/>
+  <line x1="7.5" y1="7.5" x2="14.5" y2="14.5" stroke="#b0b0b8" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="14.5" y1="7.5" x2="7.5" y2="14.5" stroke="#b0b0b8" stroke-width="1.2" stroke-linecap="round"/>
+ </g>
+
+ <!-- deactivated -->
+ <g id="deactivated-center" transform="translate(88)">
+  <rect width="22" height="22" fill="none" opacity=".001"/>
+  <circle cx="11" cy="11" r="8" fill="#e4e4e6" opacity="0.5"/>
+  <line x1="7.5" y1="7.5" x2="14.5" y2="14.5" stroke="#c4c4c6" stroke-width="1.0" stroke-linecap="round"/>
+  <line x1="14.5" y1="7.5" x2="7.5" y2="14.5" stroke="#c4c4c6" stroke-width="1.0" stroke-linecap="round"/>
+ </g>
+
+</svg>

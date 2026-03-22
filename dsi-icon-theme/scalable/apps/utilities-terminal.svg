@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DSi icon: terminal — dark navy tile, >_ glyph -->
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="tile" x1="0" y1="0" x2="0" y2="48" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#3a3a52"/>
+   <stop offset="1"   stop-color="#1e1e30"/>
+  </linearGradient>
+  <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+   <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+ </defs>
+ <rect x="1" y="1" width="46" height="46" rx="10" ry="10" fill="url(#tile)"/>
+ <rect x="1" y="1" width="46" height="23" rx="10" ry="10" fill="url(#gloss)"/>
+ <!-- prompt chevron -->
+ <polyline points="13,20 19,24 13,28"
+           fill="none" stroke="#7ab4f0" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+ <!-- underscore cursor -->
+ <rect x="22" y="28" width="13" height="2.5" rx="1" fill="#ffffff" opacity="0.85"/>
+</svg>

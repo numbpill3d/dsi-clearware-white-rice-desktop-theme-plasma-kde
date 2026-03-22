@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg-dsi" width="300" height="300" version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <!-- ═══════════════════════════════════════════════════════════════ -->
+ <!--  DSi MENU STYLE — white/grey plastic, rounded, glossy           -->
+ <!--  Coordinate system: same as specter                             -->
+ <!--    translate(0 -752.36) groups: svg_y = visual_y + 752.36       -->
+ <!--  Content:    visual (101,101)..(199,199)                         -->
+ <!--  Title bar:  visual y=83..101  → svg y=835.36..853.36  (18px)   -->
+ <!--  Side border: visual x=91..101 (L)  x=199..209 (R)  (10px)     -->
+ <!--  Bot border:  visual y=199..207 → svg y=951.36..959.36 (8px)    -->
+ <!--  Corner radius: top=10px, bottom=6px                            -->
+ <!-- ═══════════════════════════════════════════════════════════════ -->
+
+ <defs>
+
+  <!-- ── ACTIVE GRADIENTS ── -->
+
+  <!-- title bar: warm near-white top → soft grey bottom, plastic sheen -->
+  <linearGradient id="grad-title"
+    x1="0" x2="0" y1="835.36" y2="853.36" gradientUnits="userSpaceOnUse">
+   <stop offset="0"    stop-color="#f4f4f8"/>
+   <stop offset="0.45" stop-color="#e6e6ed"/>
+   <stop offset="1"    stop-color="#d6d6df"/>
+  </linearGradient>
+
+  <!-- specular gloss: strong white at top, fades to nothing at midpoint -->
+  <linearGradient id="grad-gloss"
+    x1="0" x2="0" y1="835.36" y2="853.36" gradientUnits="userSpaceOnUse">
+   <stop offset="0"    stop-color="#ffffff" stop-opacity="0.72"/>
+   <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.22"/>
+   <stop offset="1"    stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+
+  <!-- side border: outer edge darker (x=91), inner edge lighter (x=101) -->
+  <linearGradient id="grad-side"
+    x1="91" x2="101" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#d8d8e2"/>
+   <stop offset="0.5" stop-color="#e4e4ec"/>
+   <stop offset="1"   stop-color="#eeeef4"/>
+  </linearGradient>
+
+  <!-- bottom border: top → bottom, lightening slightly (convex plastic edge) -->
+  <linearGradient id="grad-bot"
+    x1="0" x2="0" y1="951.36" y2="959.36" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#d4d4de"/>
+   <stop offset="1" stop-color="#c2c2ce"/>
+  </linearGradient>
+
+  <!-- inner edge highlight — subtle white on the inner lip of the border -->
+  <linearGradient id="grad-inner"
+    x1="91" x2="101" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#ffffff" stop-opacity="0"/>
+   <stop offset="0.7" stop-color="#ffffff" stop-opacity="0.35"/>
+   <stop offset="1"   stop-color="#ffffff" stop-opacity="0.5"/>
+  </linearGradient>
+
+  <!-- ── INACTIVE GRADIENTS ── -->
+
+  <linearGradient id="grad-title-i"
+    x1="0" x2="0" y1="835.36" y2="853.36" gradientUnits="userSpaceOnUse">
+   <stop offset="0"    stop-color="#e4e4e8"/>
+   <stop offset="0.45" stop-color="#d8d8dc"/>
+   <stop offset="1"    stop-color="#ccccce"/>
+  </linearGradient>
+
+  <linearGradient id="grad-gloss-i"
+    x1="0" x2="0" y1="835.36" y2="853.36" gradientUnits="userSpaceOnUse">
+   <stop offset="0"    stop-color="#ffffff" stop-opacity="0.38"/>
+   <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.08"/>
+   <stop offset="1"    stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+
+  <linearGradient id="grad-side-i"
+    x1="91" x2="101" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#dcdcde"/>
+   <stop offset="1"   stop-color="#e8e8ea"/>
+  </linearGradient>
+
+  <linearGradient id="grad-bot-i"
+    x1="0" x2="0" y1="951.36" y2="959.36" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#ccccce"/>
+   <stop offset="1" stop-color="#c0c0c2"/>
+  </linearGradient>
+
+ </defs>
+
+ <!-- window content area background -->
+ <path id="decoration-center" d="m101 101v98h98v-98z" fill="#f2f2f8"/>
+
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <!--  TITLE BAR STRIP (between corners, x=101..199)              -->
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <g id="decoration-top" transform="translate(0 -752.36)">
+  <!-- plastic base -->
+  <path d="M 101,835.36 L 199,835.36 L 199,853.36 L 101,853.36 Z"
+        fill="url(#grad-title)"/>
+  <!-- specular gloss overlay -->
+  <path d="M 101,835.36 L 199,835.36 L 199,853.36 L 101,853.36 Z"
+        fill="url(#grad-gloss)"/>
+  <!-- DSi blue accent stripe at very top -->
+  <line x1="101" y1="836.16" x2="199" y2="836.16"
+        stroke="#7ab4f0" stroke-width="1.4" stroke-linecap="butt"/>
+  <!-- subtle inner rim at bottom of title bar -->
+  <line x1="101" y1="852.86" x2="199" y2="852.86"
+        stroke="#b8b8c8" stroke-width="0.7" opacity="0.8"/>
+  <path d="m199 833.36h-98v2h98z" opacity=".001"/>
+ </g>
+
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <!--  TOP-LEFT CORNER — 10px rounded outer corner                -->
+ <!--  Arc: (99,835.36) → (91,843.36), radius=8, CCW             -->
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <g id="decoration-topleft" transform="translate(0 -752.36)">
+  <!-- plastic base (corner L-shape with rounded outer corner) -->
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="url(#grad-title)"/>
+  <!-- specular gloss -->
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="url(#grad-gloss)"/>
+  <!-- blue accent traces the rounded arc -->
+  <path d="M 101,836.16 L 99,836.16 A 7.2,7.2 0 0 0 91.8,843.36"
+        fill="none" stroke="#7ab4f0" stroke-width="1.4" stroke-linecap="butt"/>
+  <!-- inner rim at title bar bottom -->
+  <line x1="91" y1="852.86" x2="101" y2="852.86"
+        stroke="#b8b8c8" stroke-width="0.7" opacity="0.8"/>
+ </g>
+
+ <!-- top-right corner (mirrored) -->
+ <g id="decoration-topright" transform="matrix(-1 0 0 1 300 -752.36)">
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="url(#grad-title)"/>
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="url(#grad-gloss)"/>
+  <path d="M 101,836.16 L 99,836.16 A 7.2,7.2 0 0 0 91.8,843.36"
+        fill="none" stroke="#7ab4f0" stroke-width="1.4" stroke-linecap="butt"/>
+  <line x1="91" y1="852.86" x2="101" y2="852.86"
+        stroke="#b8b8c8" stroke-width="0.7" opacity="0.8"/>
+ </g>
+
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <!--  SIDE BORDERS (x=91..101, y=843.36..951.36)                 -->
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <g id="decoration-left" transform="translate(0 -752.36)">
+  <path d="M 91,853.36 L 101,853.36 L 101,951.36 L 91,951.36 Z"
+        fill="url(#grad-side)"/>
+  <!-- inner edge highlight (faint white line on window-facing side) -->
+  <path d="M 91,853.36 L 101,853.36 L 101,951.36 L 91,951.36 Z"
+        fill="url(#grad-inner)"/>
+ </g>
+
+ <g id="decoration-right" transform="matrix(-1 0 0 1 300 -752.36)">
+  <path d="M 91,853.36 L 101,853.36 L 101,951.36 L 91,951.36 Z"
+        fill="url(#grad-side)"/>
+  <path d="M 91,853.36 L 101,853.36 L 101,951.36 L 91,951.36 Z"
+        fill="url(#grad-inner)"/>
+ </g>
+
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <!--  BOTTOM BORDER STRIP (x=101..199, y=951.36..959.36)         -->
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <g id="decoration-bottom" transform="translate(0 -752.36)">
+  <path d="M 101,951.36 L 199,951.36 L 199,959.36 L 101,959.36 Z"
+        fill="url(#grad-bot)"/>
+ </g>
+
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <!--  BOTTOM-LEFT CORNER — 6px rounded                           -->
+ <!--  Arc: (91,953.36) → (97,959.36), radius=6, CW              -->
+ <!-- ─────────────────────────────────────────────────────────── -->
+ <g id="decoration-bottomleft" transform="translate(0 -752.36)">
+  <path d="M 91,951.36 A 8,8 0 0 1 99,959.36
+           L 101,959.36 L 101,951.36 Z"
+        fill="url(#grad-bot)"/>
+ </g>
+
+ <!-- bottom-right corner (mirrored) -->
+ <g id="decoration-bottomright" transform="matrix(-1 0 0 1 300 -752.36)">
+  <path d="M 91,951.36 A 8,8 0 0 1 99,959.36
+           L 101,959.36 L 101,951.36 Z"
+        fill="url(#grad-bot)"/>
+ </g>
+
+ <!-- ═══════════════════════════════════════════════════════════════ -->
+ <!--  INACTIVE DECORATION (+268 x offset)                            -->
+ <!-- ═══════════════════════════════════════════════════════════════ -->
+
+ <path id="decoration-inactive-center" d="m369 101v98h98v-98z" fill="#e8e8ec"/>
+
+ <g id="decoration-inactive-top" transform="translate(268 -752.36)">
+  <path d="M 101,835.36 L 199,835.36 L 199,853.36 L 101,853.36 Z"
+        fill="url(#grad-title-i)"/>
+  <path d="M 101,835.36 L 199,835.36 L 199,853.36 L 101,853.36 Z"
+        fill="url(#grad-gloss-i)"/>
+  <!-- accent becomes grey when inactive -->
+  <line x1="101" y1="836.16" x2="199" y2="836.16"
+        stroke="#b0b0b8" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="101" y1="852.86" x2="199" y2="852.86"
+        stroke="#c8c8ce" stroke-width="0.6" opacity="0.7"/>
+  <path d="m199 833.36h-98v2h98z" opacity=".001"/>
+ </g>
+
+ <g id="decoration-inactive-topleft" transform="translate(268 -752.36)">
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="url(#grad-title-i)"/>
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="url(#grad-gloss-i)"/>
+  <path d="M 101,836.16 L 99,836.16 A 7.2,7.2 0 0 0 91.8,843.36"
+        fill="none" stroke="#b0b0b8" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="91" y1="852.86" x2="101" y2="852.86"
+        stroke="#c8c8ce" stroke-width="0.6" opacity="0.7"/>
+ </g>
+
+ <g id="decoration-inactive-topright" transform="matrix(-1 0 0 1 568 -752.36)">
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="url(#grad-title-i)"/>
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="url(#grad-gloss-i)"/>
+  <path d="M 101,836.16 L 99,836.16 A 7.2,7.2 0 0 0 91.8,843.36"
+        fill="none" stroke="#b0b0b8" stroke-width="1.0" stroke-linecap="butt"/>
+  <line x1="91" y1="852.86" x2="101" y2="852.86"
+        stroke="#c8c8ce" stroke-width="0.6" opacity="0.7"/>
+ </g>
+
+ <g id="decoration-inactive-left" transform="translate(268 -752.36)">
+  <path d="M 91,853.36 L 101,853.36 L 101,951.36 L 91,951.36 Z"
+        fill="url(#grad-side-i)"/>
+ </g>
+
+ <g id="decoration-inactive-right" transform="matrix(-1 0 0 1 568 -752.36)">
+  <path d="M 91,853.36 L 101,853.36 L 101,951.36 L 91,951.36 Z"
+        fill="url(#grad-side-i)"/>
+ </g>
+
+ <g id="decoration-inactive-bottom" transform="translate(268 -752.36)">
+  <path d="M 101,951.36 L 199,951.36 L 199,959.36 L 101,959.36 Z"
+        fill="url(#grad-bot-i)"/>
+ </g>
+
+ <g id="decoration-inactive-bottomleft" transform="translate(268 -752.36)">
+  <path d="M 91,951.36 A 8,8 0 0 1 99,959.36
+           L 101,959.36 L 101,951.36 Z"
+        fill="url(#grad-bot-i)"/>
+ </g>
+
+ <g id="decoration-inactive-bottomright" transform="matrix(-1 0 0 1 568 -752.36)">
+  <path d="M 91,951.36 A 8,8 0 0 1 99,959.36
+           L 101,959.36 L 101,951.36 Z"
+        fill="url(#grad-bot-i)"/>
+ </g>
+
+ <!-- ═══════════════════════════════════════════ -->
+ <!--  SHADOW HINT MARKERS                        -->
+ <!-- ═══════════════════════════════════════════ -->
+ <rect id="shadow-hint-left-margin"   x="91"  y="148" width="10" height="4" fill="#f0f" stroke-width="1.2"/>
+ <rect id="shadow-hint-right-margin"  x="199" y="148" width="10" height="4" fill="#f0f" stroke-width="1.2"/>
+ <rect id="shadow-hint-top-margin"    x="148" y="83"  width="4"  height="2" fill="#f0f" stroke-width=".5"/>
+ <rect id="shadow-hint-bottom-margin" x="148" y="205" width="4"  height="2" fill="#f0f" stroke-width="1.4"/>
+ <rect id="hint-tile-center" x="-7" y="-7" width="7" height="7" fill="#f00"/>
+
+ <!-- ═══════════════════════════════════════════════════ -->
+ <!--  MASKS (+468 x offset) — rounded corners           -->
+ <!-- ═══════════════════════════════════════════════════ -->
+ <path id="mask-center" d="m569 101v98h98v-98z" fill="#000000"/>
+
+ <g id="mask-top" transform="translate(468 -752.36)">
+  <path d="M 101,835.36 L 199,835.36 L 199,853.36 L 101,853.36 Z"
+        fill="#000000"/>
+ </g>
+
+ <g id="mask-bottom" transform="translate(468 -752.36)">
+  <path d="M 101,951.36 L 199,951.36 L 199,959.36 L 101,959.36 Z"
+        fill="#000000"/>
+ </g>
+
+ <g id="mask-left" transform="translate(468 -752.36)">
+  <path d="M 91,843.36 L 101,843.36 L 101,951.36 L 91,951.36 Z"
+        fill="#000000"/>
+ </g>
+
+ <g id="mask-right" transform="matrix(-1 0 0 1 768 -752.36)">
+  <path d="M 91,843.36 L 101,843.36 L 101,951.36 L 91,951.36 Z"
+        fill="#000000"/>
+ </g>
+
+ <!-- top-left: arc mask matches the rounded corner -->
+ <g id="mask-topleft" transform="translate(468 -752.36)">
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="#000000"/>
+ </g>
+
+ <g id="mask-topright" transform="matrix(-1 0 0 1 768 -752.36)">
+  <path d="M 99,835.36 A 8,8 0 0 0 91,843.36
+           L 91,853.36 L 101,853.36 L 101,835.36 Z"
+        fill="#000000"/>
+ </g>
+
+ <g id="mask-bottomleft" transform="translate(468 -752.36)">
+  <path d="M 91,951.36 A 8,8 0 0 1 99,959.36
+           L 101,959.36 L 101,951.36 Z"
+        fill="#000000"/>
+ </g>
+
+ <g id="mask-bottomright" transform="matrix(-1 0 0 1 768 -752.36)">
+  <path d="M 91,951.36 A 8,8 0 0 1 99,959.36
+           L 101,959.36 L 101,951.36 Z"
+        fill="#000000"/>
+ </g>
+
+</svg>

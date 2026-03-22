@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DSi popup/widget background — near-white, rounded, subtle border gradient -->
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="gb"    x1="0"  y1="0"   x2="0"   y2="100" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#f8f8fc"/>
+   <stop offset="1" stop-color="#f0f0f6"/>
+  </linearGradient>
+  <linearGradient id="gbt"   x1="0"  y1="0"   x2="0"   y2="10"  gradientUnits="userSpaceOnUse">
+   <stop offset="0"    stop-color="#c2c2d4"/>
+   <stop offset="0.25" stop-color="#d8d8e8"/>
+   <stop offset="1"    stop-color="#f8f8fc"/>
+  </linearGradient>
+  <linearGradient id="gbb"   x1="0"  y1="90"  x2="0"   y2="100" gradientUnits="userSpaceOnUse">
+   <stop offset="0"    stop-color="#f0f0f6"/>
+   <stop offset="0.75" stop-color="#d8d8e8"/>
+   <stop offset="1"    stop-color="#c2c2d4"/>
+  </linearGradient>
+  <linearGradient id="gbl"   x1="0"  y1="0"   x2="10"  y2="0"   gradientUnits="userSpaceOnUse">
+   <stop offset="0"    stop-color="#c2c2d4"/>
+   <stop offset="0.25" stop-color="#d8d8e8"/>
+   <stop offset="1"    stop-color="#f8f8fc"/>
+  </linearGradient>
+  <linearGradient id="gbr"   x1="90" y1="0"   x2="100" y2="0"   gradientUnits="userSpaceOnUse">
+   <stop offset="0"    stop-color="#f0f0f6"/>
+   <stop offset="0.75" stop-color="#d8d8e8"/>
+   <stop offset="1"    stop-color="#c2c2d4"/>
+  </linearGradient>
+ </defs>
+
+ <!-- margin hints: 8px content inset -->
+ <rect id="hint-top-margin"    x="0" y="0" width="1"  height="8" fill="none"/>
+ <rect id="hint-bottom-margin" x="0" y="0" width="1"  height="8" fill="none"/>
+ <rect id="hint-left-margin"   x="0" y="0" width="8"  height="1" fill="none"/>
+ <rect id="hint-right-margin"  x="0" y="0" width="8"  height="1" fill="none"/>
+
+ <!-- corners (10px radius, solid fill — arc provides visual rounding) -->
+ <path id="topleft"     d="M 10,0 L 10,10 L 0,10 A 10,10 0 0 1 10,0 Z"         fill="#f8f8fc"/>
+ <path id="topright"    d="M 90,0 L 90,10 L 100,10 A 10,10 0 0 0 90,0 Z"       fill="#f8f8fc"/>
+ <path id="bottomleft"  d="M 0,90 L 10,90 L 10,100 A 10,10 0 0 1 0,90 Z"       fill="#f0f0f6"/>
+ <path id="bottomright" d="M 100,90 L 90,90 L 90,100 A 10,10 0 0 0 100,90 Z"   fill="#f0f0f6"/>
+
+ <!-- edges with border-gradient effect -->
+ <rect id="top"    x="10" y="0"  width="80" height="10" fill="url(#gbt)"/>
+ <rect id="bottom" x="10" y="90" width="80" height="10" fill="url(#gbb)"/>
+ <rect id="left"   x="0"  y="10" width="10" height="80" fill="url(#gbl)"/>
+ <rect id="right"  x="90" y="10" width="10" height="80" fill="url(#gbr)"/>
+
+ <rect id="center" x="10" y="10" width="80" height="80" fill="url(#gb)"/>
+</svg>

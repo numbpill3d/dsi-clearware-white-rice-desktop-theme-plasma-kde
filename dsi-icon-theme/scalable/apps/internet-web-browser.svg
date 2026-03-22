@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DSi icon: web browser — teal tile, globe glyph -->
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="tile" x1="0" y1="0" x2="0" y2="48" gradientUnits="userSpaceOnUse">
+   <stop offset="0"   stop-color="#38b8c8"/>
+   <stop offset="1"   stop-color="#1880a0"/>
+  </linearGradient>
+  <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#ffffff" stop-opacity="0.40"/>
+   <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+ </defs>
+ <rect x="1" y="1" width="46" height="46" rx="10" ry="10" fill="url(#tile)"/>
+ <rect x="1" y="1" width="46" height="23" rx="10" ry="10" fill="url(#gloss)"/>
+ <!-- globe outline -->
+ <circle cx="24" cy="24" r="11" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+ <!-- latitude lines -->
+ <line x1="13" y1="24" x2="35" y2="24" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+ <line x1="13" y1="19" x2="35" y2="19" stroke="#ffffff" stroke-width="1.2" opacity="0.5"/>
+ <line x1="13" y1="29" x2="35" y2="29" stroke="#ffffff" stroke-width="1.2" opacity="0.5"/>
+ <!-- longitude arc (center) -->
+ <path d="M 24,13 Q 30,18 30,24 Q 30,30 24,35" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+ <path d="M 24,13 Q 18,18 18,24 Q 18,30 24,35" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+</svg>

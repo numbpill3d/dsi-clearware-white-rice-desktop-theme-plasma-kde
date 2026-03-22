@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Authors": [{"Name": "deadgirl", "Email": ""}],
+        "Category": "",
+        "Description": "Nintendo DSi menu style window decoration — white/grey plastic, rounded, glossy",
+        "Id": "dsi",
+        "License": "GPL",
+        "Name": "Dsi",
+        "Version": "1.0",
+        "Website": ""
+    }
+}
