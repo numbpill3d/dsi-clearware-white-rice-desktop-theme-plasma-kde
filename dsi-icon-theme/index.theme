@@ -2,7 +2,7 @@
 Name=DSi
 Comment=Nintendo DSi menu style — rounded square icons, plastic, glossy
 Inherits=breeze,hicolor
-Directories=1080x1080/apps,1080x1080/places,1080x1080/devices,1080x1080/status,1080x1080/actions,scalable/places,scalable/apps,scalable/devices,scalable/mimetypes,scalable/status
+Directories=1080x1080/apps,1080x1080/places,1080x1080/devices,1080x1080/status,1080x1080/actions,scalable/places,scalable/apps
 
 [1080x1080/apps]
 Size=1080
@@ -43,23 +43,3 @@ MaxSize=256
 Type=Scalable
 Context=Applications
 
-[scalable/devices]
-Size=48
-MinSize=16
-MaxSize=256
-Type=Scalable
-Context=Devices
-
-[scalable/mimetypes]
-Size=48
-MinSize=16
-MaxSize=256
-Type=Scalable
-Context=MimeTypes
-
-[scalable/status]
-Size=48
-MinSize=16
-MaxSize=256
-Type=Scalable
-Context=Status
